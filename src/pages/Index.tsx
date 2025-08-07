@@ -1,6 +1,6 @@
 import Header from "@/components/Header";
 import Hero from "@/components/Hero";
-import VisaRoadmap from "@/components/VisaRoadmap";
+import VisaRoadmapTabs from "@/components/VisaRoadmapTabs";
 import ResourcesSection from "@/components/ResourcesSection";
 import Footer from "@/components/Footer";
 
@@ -9,7 +9,7 @@ const Index = () => {
     <div className="min-h-screen">
       <Header />
       <Hero />
-      <VisaRoadmap />
+      <VisaRoadmapTabs />
       <ResourcesSection />
       <Footer />
     </div>
