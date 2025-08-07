@@ -8,35 +8,51 @@ All colors MUST be HSL.
 
 @layer base {
   :root {
-    --background: 0 0% 100%;
-    --foreground: 222.2 84% 4.9%;
+    --background: 248 250 252;
+    --foreground: 203 24% 9%;
 
-    --card: 0 0% 100%;
-    --card-foreground: 222.2 84% 4.9%;
+    --card: 255 255 255;
+    --card-foreground: 203 24% 9%;
 
-    --popover: 0 0% 100%;
-    --popover-foreground: 222.2 84% 4.9%;
+    --popover: 255 255 255;
+    --popover-foreground: 203 24% 9%;
 
-    --primary: 222.2 47.4% 11.2%;
-    --primary-foreground: 210 40% 98%;
+    --primary: 217 91% 60%;
+    --primary-foreground: 255 255 255;
+    --primary-glow: 213 93% 68%;
 
-    --secondary: 210 40% 96.1%;
-    --secondary-foreground: 222.2 47.4% 11.2%;
+    --secondary: 210 38% 95%;
+    --secondary-foreground: 203 24% 9%;
 
-    --muted: 210 40% 96.1%;
-    --muted-foreground: 215.4 16.3% 46.9%;
+    --muted: 210 38% 95%;
+    --muted-foreground: 215 25% 27%;
 
-    --accent: 210 40% 96.1%;
-    --accent-foreground: 222.2 47.4% 11.2%;
+    --accent: 142 76% 36%;
+    --accent-foreground: 255 255 255;
+    --accent-glow: 142 69% 58%;
 
-    --destructive: 0 84.2% 60.2%;
-    --destructive-foreground: 210 40% 98%;
+    --success: 142 76% 36%;
+    --success-foreground: 255 255 255;
 
-    --border: 214.3 31.8% 91.4%;
-    --input: 214.3 31.8% 91.4%;
-    --ring: 222.2 84% 4.9%;
+    --warning: 38 92% 50%;
+    --warning-foreground: 255 255 255;
 
-    --radius: 0.5rem;
+    --destructive: 0 84% 60%;
+    --destructive-foreground: 255 255 255;
+
+    --border: 220 13% 91%;
+    --input: 220 13% 91%;
+    --ring: 217 91% 60%;
+
+    --gradient-primary: linear-gradient(135deg, hsl(var(--primary)), hsl(var(--primary-glow)));
+    --gradient-success: linear-gradient(135deg, hsl(var(--success)), hsl(var(--accent-glow)));
+    --gradient-hero: linear-gradient(135deg, hsl(217 91% 60%), hsl(213 93% 68%), hsl(142 76% 36%));
+    --gradient-subtle: linear-gradient(180deg, hsl(248 250 252), hsl(241 245 249));
+
+    --shadow-elegant: 0 10px 30px -10px hsl(var(--primary) / 0.2);
+    --shadow-glow: 0 0 40px hsl(var(--primary-glow) / 0.3);
+
+    --radius: 0.75rem;
 
     --sidebar-background: 0 0% 98%;
 
@@ -101,5 +117,54 @@ All colors MUST be HSL.
 
   body {
     @apply bg-background text-foreground;
+  }
+}
+
+@layer components {
+  .roadmap-path {
+    @apply relative;
+  }
+  
+  .roadmap-path::before {
+    content: '';
+    position: absolute;
+    top: 50%;
+    right: -2rem;
+    width: 2rem;
+    height: 2px;
+    background: linear-gradient(90deg, hsl(var(--primary)), hsl(var(--primary-glow)));
+    transform: translateY(-50%);
+  }
+  
+  .roadmap-path:last-child::before {
+    display: none;
+  }
+
+  .visa-card {
+    @apply bg-card rounded-xl border border-border p-6 transition-all duration-300 hover:shadow-lg hover:border-primary/30 hover:-translate-y-1;
+  }
+
+  .hero-gradient {
+    background: var(--gradient-hero);
+  }
+
+  .primary-gradient {
+    background: var(--gradient-primary);
+  }
+
+  .success-gradient {
+    background: var(--gradient-success);
+  }
+
+  .subtle-gradient {
+    background: var(--gradient-subtle);
+  }
+
+  .glow-shadow {
+    box-shadow: var(--shadow-glow);
+  }
+
+  .elegant-shadow {
+    box-shadow: var(--shadow-elegant);
   }
 }
