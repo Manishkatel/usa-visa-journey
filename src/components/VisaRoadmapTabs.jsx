@@ -168,7 +168,7 @@ const visaTypes = [
   }
 ];
 
-const getDifficultyColor = (difficulty: string) => {
+const getDifficultyColor = (difficulty) => {
   switch (difficulty) {
     case "Easy": return "secondary";
     case "Medium": return "outline";
@@ -217,7 +217,7 @@ const VisaRoadmapTabs = () => {
                   <CardDescription className="text-lg">{visa.description}</CardDescription>
                   
                   <div className="flex items-center justify-center gap-4 mt-4">
-                    <Badge variant={getDifficultyColor(visa.difficulty) as any}>
+                    <Badge variant={getDifficultyColor(visa.difficulty)}>
                       {visa.difficulty}
                     </Badge>
                     <Badge variant="outline">Timeline: {visa.timeline}</Badge>
