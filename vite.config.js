@@ -3,7 +3,7 @@ import react from "@vitejs/plugin-react-swc";
 import path from "path";
 import { componentTagger } from "lovable-tagger";
 
-// https://vitejs.dev/config/
+// Pure JavaScript Vite config - no TypeScript
 export default defineConfig(({ mode }) => ({
   server: {
     host: "::",
@@ -18,5 +18,13 @@ export default defineConfig(({ mode }) => ({
     alias: {
       "@": path.resolve(__dirname, "./src"),
     },
+  },
+  define: {
+    // Disable TypeScript checking in development
+    __DEV__: mode === 'development',
+  },
+  build: {
+    target: 'esnext',
+    minify: 'esbuild',
   },
 }));
