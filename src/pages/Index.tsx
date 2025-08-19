@@ -2,6 +2,7 @@ import Header from "@/components/Header";
 import Hero from "@/components/Hero";
 import VisaRoadmapTabs from "@/components/VisaRoadmapTabs";
 import ResourcesSection from "@/components/ResourcesSection";
+import Contact from "@/components/Contact";
 import Footer from "@/components/Footer";
 
 const Index = () => {
@@ -11,6 +12,7 @@ const Index = () => {
       <Hero />
       <VisaRoadmapTabs />
       <ResourcesSection />
+      <Contact />
       <Footer />
     </div>
   );

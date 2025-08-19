@@ -1,0 +1,253 @@
+import React, { useState } from 'react';
+import { Button } from "@/components/ui/button";
+import { Input } from "@/components/ui/input";
+import { Textarea } from "@/components/ui/textarea";
+import { Label } from "@/components/ui/label";
+import { Card, CardContent, CardHeader, CardTitle } from "@/components/ui/card";
+import { Badge } from "@/components/ui/badge";
+import { 
+  Phone, 
+  Mail, 
+  MapPin, 
+  Clock, 
+  Send,
+  CheckCircle,
+  Facebook,
+  Twitter,
+  Instagram,
+  Linkedin
+} from 'lucide-react';
+
+const Contact = () => {
+  const [formData, setFormData] = useState({
+    name: '',
+    email: '',
+    phone: '',
+    program: '',
+    message: ''
+  });
+
+  const handleSubmit = (e) => {
+    e.preventDefault();
+    console.log('Form submitted:', formData);
+    // Add your form submission logic here
+  };
+
+  const handleChange = (e) => {
+    setFormData({
+      ...formData,
+      [e.target.name]: e.target.value
+    });
+  };
+
+  return (
+    <section id="contact" className="py-20 bg-background">
+      <div className="container mx-auto px-4">
+        <div className="text-center mb-16">
+          <Badge variant="outline" className="mb-4">
+            📞 Get in Touch
+          </Badge>
+          <h2 className="text-4xl md:text-5xl font-bold mb-6">
+            Contact Us Today
+          </h2>
+          <p className="text-xl text-muted-foreground max-w-3xl mx-auto">
+            Ready to start your journey to US universities? Contact us today for a free consultation 
+            and let our experts guide you towards your academic goals.
+          </p>
+        </div>
+
+        <div className="grid lg:grid-cols-2 gap-12">
+          {/* Contact Information */}
+          <div className="space-y-8">
+            <Card className="visa-card">
+              <CardHeader>
+                <CardTitle className="text-2xl">Contact Information</CardTitle>
+              </CardHeader>
+              <CardContent className="space-y-6">
+                <div className="flex items-start space-x-4">
+                  <div className="w-12 h-12 primary-gradient rounded-xl flex items-center justify-center">
+                    <Phone className="h-6 w-6 text-white" />
+                  </div>
+                  <div>
+                    <h4 className="font-semibold text-foreground">Phone</h4>
+                    <p className="text-muted-foreground">+1 (555) 123-4567</p>
+                    <p className="text-muted-foreground">+91 98765 43210</p>
+                  </div>
+                </div>
+
+                <div className="flex items-start space-x-4">
+                  <div className="w-12 h-12 primary-gradient rounded-xl flex items-center justify-center">
+                    <Mail className="h-6 w-6 text-white" />
+                  </div>
+                  <div>
+                    <h4 className="font-semibold text-foreground">Email</h4>
+                    <p className="text-muted-foreground">info@usastudylearn.com</p>
+                    <p className="text-muted-foreground">admissions@usastudylearn.com</p>
+                  </div>
+                </div>
+
+                <div className="flex items-start space-x-4">
+                  <div className="w-12 h-12 primary-gradient rounded-xl flex items-center justify-center">
+                    <MapPin className="h-6 w-6 text-white" />
+                  </div>
+                  <div>
+                    <h4 className="font-semibold text-foreground">Office</h4>
+                    <p className="text-muted-foreground">123 Education Street</p>
+                    <p className="text-muted-foreground">New Delhi, India 110001</p>
+                  </div>
+                </div>
+
+                <div className="flex items-start space-x-4">
+                  <div className="w-12 h-12 primary-gradient rounded-xl flex items-center justify-center">
+                    <Clock className="h-6 w-6 text-white" />
+                  </div>
+                  <div>
+                    <h4 className="font-semibold text-foreground">Office Hours</h4>
+                    <p className="text-muted-foreground">Monday - Friday: 9:00 AM - 6:00 PM</p>
+                    <p className="text-muted-foreground">Saturday: 10:00 AM - 4:00 PM</p>
+                  </div>
+                </div>
+              </CardContent>
+            </Card>
+
+            {/* Social Media */}
+            <Card className="visa-card">
+              <CardHeader>
+                <CardTitle>Follow Us</CardTitle>
+              </CardHeader>
+              <CardContent>
+                <div className="flex space-x-4">
+                  <a 
+                    href="#" 
+                    className="w-12 h-12 primary-gradient rounded-xl flex items-center justify-center text-white hover:glow-shadow hover:scale-105 transition-all duration-300"
+                    aria-label="Facebook"
+                  >
+                    <Facebook className="h-5 w-5" />
+                  </a>
+                  <a 
+                    href="#" 
+                    className="w-12 h-12 primary-gradient rounded-xl flex items-center justify-center text-white hover:glow-shadow hover:scale-105 transition-all duration-300"
+                    aria-label="Twitter"
+                  >
+                    <Twitter className="h-5 w-5" />
+                  </a>
+                  <a 
+                    href="#" 
+                    className="w-12 h-12 primary-gradient rounded-xl flex items-center justify-center text-white hover:glow-shadow hover:scale-105 transition-all duration-300"
+                    aria-label="Instagram"
+                  >
+                    <Instagram className="h-5 w-5" />
+                  </a>
+                  <a 
+                    href="#" 
+                    className="w-12 h-12 primary-gradient rounded-xl flex items-center justify-center text-white hover:glow-shadow hover:scale-105 transition-all duration-300"
+                    aria-label="LinkedIn"
+                  >
+                    <Linkedin className="h-5 w-5" />
+                  </a>
+                </div>
+              </CardContent>
+            </Card>
+          </div>
+
+          {/* Contact Form */}
+          <Card className="visa-card">
+            <CardHeader>
+              <CardTitle className="text-2xl">Send us a Message</CardTitle>
+            </CardHeader>
+            <CardContent>
+              <form onSubmit={handleSubmit} className="space-y-6">
+                <div className="grid md:grid-cols-2 gap-6">
+                  <div>
+                    <Label htmlFor="name">Full Name *</Label>
+                    <Input
+                      id="name"
+                      name="name"
+                      required
+                      value={formData.name}
+                      onChange={handleChange}
+                      placeholder="Enter your full name"
+                    />
+                  </div>
+                  
+                  <div>
+                    <Label htmlFor="email">Email Address *</Label>
+                    <Input
+                      id="email"
+                      name="email"
+                      type="email"
+                      required
+                      value={formData.email}
+                      onChange={handleChange}
+                      placeholder="Enter your email"
+                    />
+                  </div>
+                </div>
+
+                <div className="grid md:grid-cols-2 gap-6">
+                  <div>
+                    <Label htmlFor="phone">Phone Number *</Label>
+                    <Input
+                      id="phone"
+                      name="phone"
+                      type="tel"
+                      required
+                      value={formData.phone}
+                      onChange={handleChange}
+                      placeholder="Enter your phone number"
+                    />
+                  </div>
+                  
+                  <div>
+                    <Label htmlFor="program">Interested Program</Label>
+                    <select
+                      id="program"
+                      name="program"
+                      value={formData.program}
+                      onChange={handleChange}
+                      className="flex h-10 w-full rounded-md border border-input bg-background px-3 py-2 text-sm ring-offset-background file:border-0 file:bg-transparent file:text-sm file:font-medium placeholder:text-muted-foreground focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-ring focus-visible:ring-offset-2 disabled:cursor-not-allowed disabled:opacity-50"
+                    >
+                      <option value="">Select a program</option>
+                      <option value="undergraduate">Undergraduate</option>
+                      <option value="masters">Master's Degree</option>
+                      <option value="phd">PhD</option>
+                      <option value="mba">MBA</option>
+                    </select>
+                  </div>
+                </div>
+
+                <div>
+                  <Label htmlFor="message">Message</Label>
+                  <Textarea
+                    id="message"
+                    name="message"
+                    rows={4}
+                    value={formData.message}
+                    onChange={handleChange}
+                    placeholder="Tell us about your goals and how we can help you..."
+                  />
+                </div>
+
+                <Button type="submit" variant="hero" className="w-full">
+                  Send Message
+                  <Send className="ml-2 h-5 w-5" />
+                </Button>
+              </form>
+
+              <div className="mt-6 p-4 bg-muted rounded-lg border border-border">
+                <div className="flex items-center text-muted-foreground">
+                  <CheckCircle className="h-5 w-5 mr-2" />
+                  <span className="text-sm font-medium">
+                    We typically respond within 24 hours
+                  </span>
+                </div>
+              </div>
+            </CardContent>
+          </Card>
+        </div>
+      </div>
+    </section>
+  );
+};
+
+export default Contact;
