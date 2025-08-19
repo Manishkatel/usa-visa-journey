@@ -41,56 +41,55 @@ const Contact = () => {
   };
 
   return (
-    <section id="contact" className="py-12 bg-background">
-      <div className="container mx-auto px-4">
-        <div className="text-center mb-8">
+    <section id="contact" className="py-8 bg-background">
+      <div className="container mx-auto px-4 max-w-5xl">
+        <div className="text-center mb-6">
           <Badge variant="outline" className="mb-2">
-            📞 Get in Touch
+            📞 Contact
           </Badge>
-          <h2 className="text-2xl md:text-3xl font-bold mb-3">
-            Contact Us Today
+          <h2 className="text-xl md:text-2xl font-bold mb-2">
+            Get in Touch
           </h2>
-          <p className="text-muted-foreground max-w-2xl mx-auto">
-            Ready to start your journey? Contact us for a free consultation.
+          <p className="text-sm text-muted-foreground max-w-lg mx-auto">
+            Ready to start your journey? Contact us for a consultation.
           </p>
         </div>
 
-        <div className="grid lg:grid-cols-2 gap-8">
+        <div className="grid grid-cols-1 lg:grid-cols-2 gap-6">
           {/* Contact Information */}
           <Card className="visa-card">
-            <CardHeader>
-              <CardTitle className="text-xl">Contact Information</CardTitle>
+            <CardHeader className="pb-3">
+              <CardTitle className="text-lg">Contact Info</CardTitle>
             </CardHeader>
-            <CardContent className="space-y-4">
+            <CardContent className="space-y-3 pb-4">
               <div className="flex items-start space-x-3">
-                <div className="w-10 h-10 primary-gradient rounded-lg flex items-center justify-center">
-                  <Phone className="h-4 w-4 text-white" />
+                <div className="w-8 h-8 primary-gradient rounded-lg flex items-center justify-center">
+                  <Phone className="h-3 w-3 text-white" />
                 </div>
                 <div>
-                  <h4 className="font-semibold text-sm">Phone</h4>
-                  <p className="text-sm text-muted-foreground">+1 (555) 123-4567</p>
-                  <p className="text-sm text-muted-foreground">+91 98765 43210</p>
+                  <h4 className="font-semibold text-xs">Phone</h4>
+                  <p className="text-xs text-muted-foreground">+1 (555) 123-4567</p>
+                  <p className="text-xs text-muted-foreground">+91 98765 43210</p>
                 </div>
               </div>
 
               <div className="flex items-start space-x-3">
-                <div className="w-10 h-10 primary-gradient rounded-lg flex items-center justify-center">
-                  <Mail className="h-4 w-4 text-white" />
+                <div className="w-8 h-8 primary-gradient rounded-lg flex items-center justify-center">
+                  <Mail className="h-3 w-3 text-white" />
                 </div>
                 <div>
-                  <h4 className="font-semibold text-sm">Email</h4>
-                  <p className="text-sm text-muted-foreground">info@usastudylearn.com</p>
-                  <p className="text-sm text-muted-foreground">admissions@usastudylearn.com</p>
+                  <h4 className="font-semibold text-xs">Email</h4>
+                  <p className="text-xs text-muted-foreground">info@usastudylearn.com</p>
                 </div>
               </div>
 
               <div className="flex items-start space-x-3">
-                <div className="w-10 h-10 primary-gradient rounded-lg flex items-center justify-center">
-                  <MapPin className="h-4 w-4 text-white" />
+                <div className="w-8 h-8 primary-gradient rounded-lg flex items-center justify-center">
+                  <MapPin className="h-3 w-3 text-white" />
                 </div>
                 <div>
-                  <h4 className="font-semibold text-sm">Office</h4>
-                  <p className="text-sm text-muted-foreground">123 Education Street</p>
+                  <h4 className="font-semibold text-xs">Office</h4>
+                  <p className="text-xs text-muted-foreground">123 Education Street, New Delhi</p>
                   <p className="text-sm text-muted-foreground">New Delhi, India 110001</p>
                 </div>
               </div>
@@ -114,28 +113,28 @@ const Contact = () => {
                     className="w-10 h-10 primary-gradient rounded-lg flex items-center justify-center text-white hover:glow-shadow hover:scale-105 transition-all duration-300"
                     aria-label="Facebook"
                   >
-                    <Facebook className="h-4 w-4" />
+                    <Facebook className="h-3 w-3" />
                   </a>
                   <a 
                     href="#" 
-                    className="w-10 h-10 primary-gradient rounded-lg flex items-center justify-center text-white hover:glow-shadow hover:scale-105 transition-all duration-300"
+                    className="w-8 h-8 primary-gradient rounded-lg flex items-center justify-center text-white hover:glow-shadow hover:scale-105 transition-all duration-300"
                     aria-label="Twitter"
                   >
-                    <Twitter className="h-4 w-4" />
+                    <Twitter className="h-3 w-3" />
                   </a>
                   <a 
                     href="#" 
-                    className="w-10 h-10 primary-gradient rounded-lg flex items-center justify-center text-white hover:glow-shadow hover:scale-105 transition-all duration-300"
+                    className="w-8 h-8 primary-gradient rounded-lg flex items-center justify-center text-white hover:glow-shadow hover:scale-105 transition-all duration-300"
                     aria-label="Instagram"
                   >
-                    <Instagram className="h-4 w-4" />
+                    <Instagram className="h-3 w-3" />
                   </a>
                   <a 
                     href="#" 
-                    className="w-10 h-10 primary-gradient rounded-lg flex items-center justify-center text-white hover:glow-shadow hover:scale-105 transition-all duration-300"
+                    className="w-8 h-8 primary-gradient rounded-lg flex items-center justify-center text-white hover:glow-shadow hover:scale-105 transition-all duration-300"
                     aria-label="LinkedIn"
                   >
-                    <Linkedin className="h-4 w-4" />
+                    <Linkedin className="h-3 w-3" />
                   </a>
                 </div>
               </div>
@@ -144,26 +143,27 @@ const Contact = () => {
 
           {/* Contact Form */}
           <Card className="visa-card">
-            <CardHeader>
-              <CardTitle className="text-xl">Send us a Message</CardTitle>
+            <CardHeader className="pb-3">
+              <CardTitle className="text-lg">Send Message</CardTitle>
             </CardHeader>
-            <CardContent>
-              <form onSubmit={handleSubmit} className="space-y-4">
-                <div className="grid md:grid-cols-2 gap-4">
+            <CardContent className="pb-4">
+              <form onSubmit={handleSubmit} className="space-y-3">
+                <div className="grid grid-cols-2 gap-3">
                   <div>
-                    <Label htmlFor="name" className="text-sm">Full Name *</Label>
+                    <Label htmlFor="name" className="text-xs">Name *</Label>
                     <Input
                       id="name"
                       name="name"
                       required
                       value={formData.name}
                       onChange={handleChange}
-                      placeholder="Enter your full name"
+                      placeholder="Your name"
+                      className="h-8 text-xs"
                     />
                   </div>
                   
                   <div>
-                    <Label htmlFor="email" className="text-sm">Email Address *</Label>
+                    <Label htmlFor="email" className="text-xs">Email *</Label>
                     <Input
                       id="email"
                       name="email"
@@ -171,66 +171,36 @@ const Contact = () => {
                       required
                       value={formData.email}
                       onChange={handleChange}
-                      placeholder="Enter your email"
+                      placeholder="your@email.com"
+                      className="h-8 text-xs"
                     />
-                  </div>
-                </div>
-
-                <div className="grid md:grid-cols-2 gap-4">
-                  <div>
-                    <Label htmlFor="phone" className="text-sm">Phone Number *</Label>
-                    <Input
-                      id="phone"
-                      name="phone"
-                      type="tel"
-                      required
-                      value={formData.phone}
-                      onChange={handleChange}
-                      placeholder="Enter your phone number"
-                    />
-                  </div>
-                  
-                  <div>
-                    <Label htmlFor="program" className="text-sm">Interested Program</Label>
-                    <select
-                      id="program"
-                      name="program"
-                      value={formData.program}
-                      onChange={handleChange}
-                      className="flex h-10 w-full rounded-md border border-input bg-background px-3 py-2 text-sm ring-offset-background file:border-0 file:bg-transparent file:text-sm file:font-medium placeholder:text-muted-foreground focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-ring focus-visible:ring-offset-2 disabled:cursor-not-allowed disabled:opacity-50"
-                    >
-                      <option value="">Select a program</option>
-                      <option value="undergraduate">Undergraduate</option>
-                      <option value="masters">Master's Degree</option>
-                      <option value="phd">PhD</option>
-                      <option value="mba">MBA</option>
-                    </select>
                   </div>
                 </div>
 
                 <div>
-                  <Label htmlFor="message" className="text-sm">Message</Label>
+                  <Label htmlFor="message" className="text-xs">Message</Label>
                   <Textarea
                     id="message"
                     name="message"
-                    rows={3}
+                    rows={2}
                     value={formData.message}
                     onChange={handleChange}
-                    placeholder="Tell us about your goals and how we can help you..."
+                    placeholder="Your message..."
+                    className="text-xs"
                   />
                 </div>
 
-                <Button type="submit" variant="hero" className="w-full">
-                  Send Message
-                  <Send className="ml-2 h-5 w-5" />
+                <Button type="submit" variant="hero" className="w-full h-8 text-xs">
+                  Send
+                  <Send className="ml-1 h-3 w-3" />
                 </Button>
               </form>
 
-              <div className="mt-4 p-3 bg-muted rounded-lg border border-border">
+              <div className="mt-3 p-2 bg-muted rounded-lg">
                 <div className="flex items-center text-muted-foreground">
-                  <CheckCircle className="h-5 w-5 mr-2" />
-                  <span className="text-sm font-medium">
-                    We typically respond within 24 hours
+                  <CheckCircle className="h-3 w-3 mr-1" />
+                  <span className="text-xs font-medium">
+                    We respond within 24 hours
                   </span>
                 </div>
               </div>
