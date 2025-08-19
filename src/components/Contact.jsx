@@ -41,125 +41,117 @@ const Contact = () => {
   };
 
   return (
-    <section id="contact" className="py-20 bg-background">
+    <section id="contact" className="py-12 bg-background">
       <div className="container mx-auto px-4">
-        <div className="text-center mb-16">
-          <Badge variant="outline" className="mb-4">
+        <div className="text-center mb-8">
+          <Badge variant="outline" className="mb-2">
             📞 Get in Touch
           </Badge>
-          <h2 className="text-4xl md:text-5xl font-bold mb-6">
+          <h2 className="text-2xl md:text-3xl font-bold mb-3">
             Contact Us Today
           </h2>
-          <p className="text-xl text-muted-foreground max-w-3xl mx-auto">
-            Ready to start your journey to US universities? Contact us today for a free consultation 
-            and let our experts guide you towards your academic goals.
+          <p className="text-muted-foreground max-w-2xl mx-auto">
+            Ready to start your journey? Contact us for a free consultation.
           </p>
         </div>
 
-        <div className="grid lg:grid-cols-2 gap-12">
+        <div className="grid lg:grid-cols-2 gap-8">
           {/* Contact Information */}
-          <div className="space-y-8">
-            <Card className="visa-card">
-              <CardHeader>
-                <CardTitle className="text-2xl">Contact Information</CardTitle>
-              </CardHeader>
-              <CardContent className="space-y-6">
-                <div className="flex items-start space-x-4">
-                  <div className="w-12 h-12 primary-gradient rounded-xl flex items-center justify-center">
-                    <Phone className="h-6 w-6 text-white" />
-                  </div>
-                  <div>
-                    <h4 className="font-semibold text-foreground">Phone</h4>
-                    <p className="text-muted-foreground">+1 (555) 123-4567</p>
-                    <p className="text-muted-foreground">+91 98765 43210</p>
-                  </div>
+          <Card className="visa-card">
+            <CardHeader>
+              <CardTitle className="text-xl">Contact Information</CardTitle>
+            </CardHeader>
+            <CardContent className="space-y-4">
+              <div className="flex items-start space-x-3">
+                <div className="w-10 h-10 primary-gradient rounded-lg flex items-center justify-center">
+                  <Phone className="h-4 w-4 text-white" />
                 </div>
-
-                <div className="flex items-start space-x-4">
-                  <div className="w-12 h-12 primary-gradient rounded-xl flex items-center justify-center">
-                    <Mail className="h-6 w-6 text-white" />
-                  </div>
-                  <div>
-                    <h4 className="font-semibold text-foreground">Email</h4>
-                    <p className="text-muted-foreground">info@usastudylearn.com</p>
-                    <p className="text-muted-foreground">admissions@usastudylearn.com</p>
-                  </div>
+                <div>
+                  <h4 className="font-semibold text-sm">Phone</h4>
+                  <p className="text-sm text-muted-foreground">+1 (555) 123-4567</p>
+                  <p className="text-sm text-muted-foreground">+91 98765 43210</p>
                 </div>
+              </div>
 
-                <div className="flex items-start space-x-4">
-                  <div className="w-12 h-12 primary-gradient rounded-xl flex items-center justify-center">
-                    <MapPin className="h-6 w-6 text-white" />
-                  </div>
-                  <div>
-                    <h4 className="font-semibold text-foreground">Office</h4>
-                    <p className="text-muted-foreground">123 Education Street</p>
-                    <p className="text-muted-foreground">New Delhi, India 110001</p>
-                  </div>
+              <div className="flex items-start space-x-3">
+                <div className="w-10 h-10 primary-gradient rounded-lg flex items-center justify-center">
+                  <Mail className="h-4 w-4 text-white" />
                 </div>
-
-                <div className="flex items-start space-x-4">
-                  <div className="w-12 h-12 primary-gradient rounded-xl flex items-center justify-center">
-                    <Clock className="h-6 w-6 text-white" />
-                  </div>
-                  <div>
-                    <h4 className="font-semibold text-foreground">Office Hours</h4>
-                    <p className="text-muted-foreground">Monday - Friday: 9:00 AM - 6:00 PM</p>
-                    <p className="text-muted-foreground">Saturday: 10:00 AM - 4:00 PM</p>
-                  </div>
+                <div>
+                  <h4 className="font-semibold text-sm">Email</h4>
+                  <p className="text-sm text-muted-foreground">info@usastudylearn.com</p>
+                  <p className="text-sm text-muted-foreground">admissions@usastudylearn.com</p>
                 </div>
-              </CardContent>
-            </Card>
+              </div>
 
-            {/* Social Media */}
-            <Card className="visa-card">
-              <CardHeader>
-                <CardTitle>Follow Us</CardTitle>
-              </CardHeader>
-              <CardContent>
-                <div className="flex space-x-4">
+              <div className="flex items-start space-x-3">
+                <div className="w-10 h-10 primary-gradient rounded-lg flex items-center justify-center">
+                  <MapPin className="h-4 w-4 text-white" />
+                </div>
+                <div>
+                  <h4 className="font-semibold text-sm">Office</h4>
+                  <p className="text-sm text-muted-foreground">123 Education Street</p>
+                  <p className="text-sm text-muted-foreground">New Delhi, India 110001</p>
+                </div>
+              </div>
+
+              <div className="flex items-start space-x-3">
+                <div className="w-10 h-10 primary-gradient rounded-lg flex items-center justify-center">
+                  <Clock className="h-4 w-4 text-white" />
+                </div>
+                <div>
+                  <h4 className="font-semibold text-sm">Office Hours</h4>
+                  <p className="text-sm text-muted-foreground">Mon-Fri: 9:00 AM - 6:00 PM</p>
+                  <p className="text-sm text-muted-foreground">Saturday: 10:00 AM - 4:00 PM</p>
+                </div>
+              </div>
+
+              <div className="pt-4 border-t">
+                <h4 className="font-semibold text-sm mb-3">Follow Us</h4>
+                <div className="flex space-x-3">
                   <a 
                     href="#" 
-                    className="w-12 h-12 primary-gradient rounded-xl flex items-center justify-center text-white hover:glow-shadow hover:scale-105 transition-all duration-300"
+                    className="w-10 h-10 primary-gradient rounded-lg flex items-center justify-center text-white hover:glow-shadow hover:scale-105 transition-all duration-300"
                     aria-label="Facebook"
                   >
-                    <Facebook className="h-5 w-5" />
+                    <Facebook className="h-4 w-4" />
                   </a>
                   <a 
                     href="#" 
-                    className="w-12 h-12 primary-gradient rounded-xl flex items-center justify-center text-white hover:glow-shadow hover:scale-105 transition-all duration-300"
+                    className="w-10 h-10 primary-gradient rounded-lg flex items-center justify-center text-white hover:glow-shadow hover:scale-105 transition-all duration-300"
                     aria-label="Twitter"
                   >
-                    <Twitter className="h-5 w-5" />
+                    <Twitter className="h-4 w-4" />
                   </a>
                   <a 
                     href="#" 
-                    className="w-12 h-12 primary-gradient rounded-xl flex items-center justify-center text-white hover:glow-shadow hover:scale-105 transition-all duration-300"
+                    className="w-10 h-10 primary-gradient rounded-lg flex items-center justify-center text-white hover:glow-shadow hover:scale-105 transition-all duration-300"
                     aria-label="Instagram"
                   >
-                    <Instagram className="h-5 w-5" />
+                    <Instagram className="h-4 w-4" />
                   </a>
                   <a 
                     href="#" 
-                    className="w-12 h-12 primary-gradient rounded-xl flex items-center justify-center text-white hover:glow-shadow hover:scale-105 transition-all duration-300"
+                    className="w-10 h-10 primary-gradient rounded-lg flex items-center justify-center text-white hover:glow-shadow hover:scale-105 transition-all duration-300"
                     aria-label="LinkedIn"
                   >
-                    <Linkedin className="h-5 w-5" />
+                    <Linkedin className="h-4 w-4" />
                   </a>
                 </div>
-              </CardContent>
-            </Card>
-          </div>
+              </div>
+            </CardContent>
+          </Card>
 
           {/* Contact Form */}
           <Card className="visa-card">
             <CardHeader>
-              <CardTitle className="text-2xl">Send us a Message</CardTitle>
+              <CardTitle className="text-xl">Send us a Message</CardTitle>
             </CardHeader>
             <CardContent>
-              <form onSubmit={handleSubmit} className="space-y-6">
-                <div className="grid md:grid-cols-2 gap-6">
+              <form onSubmit={handleSubmit} className="space-y-4">
+                <div className="grid md:grid-cols-2 gap-4">
                   <div>
-                    <Label htmlFor="name">Full Name *</Label>
+                    <Label htmlFor="name" className="text-sm">Full Name *</Label>
                     <Input
                       id="name"
                       name="name"
@@ -171,7 +163,7 @@ const Contact = () => {
                   </div>
                   
                   <div>
-                    <Label htmlFor="email">Email Address *</Label>
+                    <Label htmlFor="email" className="text-sm">Email Address *</Label>
                     <Input
                       id="email"
                       name="email"
@@ -184,9 +176,9 @@ const Contact = () => {
                   </div>
                 </div>
 
-                <div className="grid md:grid-cols-2 gap-6">
+                <div className="grid md:grid-cols-2 gap-4">
                   <div>
-                    <Label htmlFor="phone">Phone Number *</Label>
+                    <Label htmlFor="phone" className="text-sm">Phone Number *</Label>
                     <Input
                       id="phone"
                       name="phone"
@@ -199,7 +191,7 @@ const Contact = () => {
                   </div>
                   
                   <div>
-                    <Label htmlFor="program">Interested Program</Label>
+                    <Label htmlFor="program" className="text-sm">Interested Program</Label>
                     <select
                       id="program"
                       name="program"
@@ -217,11 +209,11 @@ const Contact = () => {
                 </div>
 
                 <div>
-                  <Label htmlFor="message">Message</Label>
+                  <Label htmlFor="message" className="text-sm">Message</Label>
                   <Textarea
                     id="message"
                     name="message"
-                    rows={4}
+                    rows={3}
                     value={formData.message}
                     onChange={handleChange}
                     placeholder="Tell us about your goals and how we can help you..."
@@ -234,7 +226,7 @@ const Contact = () => {
                 </Button>
               </form>
 
-              <div className="mt-6 p-4 bg-muted rounded-lg border border-border">
+              <div className="mt-4 p-3 bg-muted rounded-lg border border-border">
                 <div className="flex items-center text-muted-foreground">
                   <CheckCircle className="h-5 w-5 mr-2" />
                   <span className="text-sm font-medium">
